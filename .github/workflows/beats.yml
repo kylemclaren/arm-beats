@@ -26,7 +26,6 @@ jobs:
             heartbeat,
             metricbeat,
             packetbeat,
-            winlogbeat,
             osquerybeat,
           ]
         distro: [buster]
