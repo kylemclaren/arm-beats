@@ -1,7 +1,7 @@
 # arm-beats
 
-![](https://badgen.net/github/release/vrince/arm-beats)
-[![CI](https://github.com/vrince/arm-beats/actions/workflows/beats.yml/badge.svg)](https://github.com/vrince/arm-beats/actions/workflows/beats.yml)
+![](https://badgen.net/github/release/kylemclaren/arm-beats)
+[![CI](https://github.com/kylemclaren/arm-beats/actions/workflows/beats.yml/badge.svg)](https://github.com/kylemclaren/arm-beats/actions/workflows/beats.yml)
 
 Automated Elastic `filebeat`, `metricbeat`, `heartbeat` & `packagebeat` builds for **linux/armv7 & linux/armv6 32bits**.
 
@@ -9,14 +9,14 @@ Automated Elastic `filebeat`, `metricbeat`, `heartbeat` & `packagebeat` builds f
 
 Currently elasticsearch team do not provide any **arm 32bits** (armv7 / armv6) builds for `filebeat`, `metricbeat`, `heartbeat` & `packagebeat` this repository fixes this.
 
-[latest builds](https://github.com/vrince/arm-beats/releases)
+[latest builds](https://github.com/kylemclaren/arm-beats/releases)
 
 [official builds](https://www.elastic.co/downloads/past-releases)
 
 ## Run `filebeat` on a raspberry pi
 
 ```bash
-wget https://github.com/vrince/arm-beats/releases/download/v8.3.3/filebeat-8.3.3-linux-armv7l.tar.gz
+wget https://github.com/kylemclaren/arm-beats/releases/download/v8.3.3/filebeat-8.3.3-linux-armv7l.tar.gz
 tar -xf filebeat-8.3.3-linux-armv7l.tar.gz
 cd filebeat-8.3.3-linux-armv7l
 file ./filebeat
@@ -33,7 +33,7 @@ For more information about how to configure `filebeat` --> [documentation](https
 ## Run `metricbeat` on raspberry pi
 
 ```bash
-wget https://github.com/vrince/arm-beats/releases/download/v8.3.3/metricbeat-8.3.3-linux-armv7l.tar.gz
+wget https://github.com/kylemclaren/arm-beats/releases/download/v8.3.3/metricbeat-8.3.3-linux-armv7l.tar.gz
 tar -xf metricbeat-8.3.3-linux-armv7l.tar.gz
 cd metricbeat-8.3.3-linux-armv7l
 file ./metricbeat
@@ -49,7 +49,7 @@ For more information about how to configure `metricbeat` --> [documentation](htt
 
 ## Builds
 
-[![CI](https://github.com/vrince/arm-beats/actions/workflows/beats.yml/badge.svg)](https://github.com/vrince/arm-beats/actions/workflows/beats.yml)
+[![CI](https://github.com/kylemclaren/arm-beats/actions/workflows/beats.yml/badge.svg)](https://github.com/kylemclaren/arm-beats/actions/workflows/beats.yml)
 
 This automation script uses emulated (`qemu`) multi-arch capability of docker. Performance is really not that great, so we only perform `go get` to build necessary binary file. Finally we patch official elasticsearch  (arm64) beat package swapping the main binary.
 
