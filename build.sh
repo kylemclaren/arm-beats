@@ -4,8 +4,8 @@
 BEAT="${1:-filebeat}"
 TAG="${2}"
 
-if [[ -z ${TAG} || ${TAG} == "master" ]] ; then
-    TAG="v7.16.2"
+if [[ -z ${TAG} || ${TAG} == "master" ]]; then
+    TAG="v8.4.3"
     echo "Using default tag(${TAG})"
 fi
 
@@ -21,7 +21,7 @@ export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
 mkdir -p "${GOPATH}"
 go version
 
-if [[ ! -d beats ]] ; then
+if [[ ! -d beats ]]; then
     echo "Cloning elastic/beats git tag(${TAG})"
     git clone --quiet --single-branch --branch="${TAG}" --depth=1 "https://github.com/elastic/beats.git"
     cd "${SRC}/beats"
